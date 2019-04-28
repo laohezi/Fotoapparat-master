@@ -15,6 +15,8 @@ What it provides:
 - Both Kotlin and Java friendly configurations.
 - Last, but not least, non 0% test coverage.
 
+- white balance support
+
 Taking picture becomes as simple as:
 
 ```kotlin
