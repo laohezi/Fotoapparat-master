@@ -31,6 +31,7 @@ private infix fun CameraParameters.tryApplyInto(parameters: Camera.Parameters) {
     previewResolution applyPreviewInto parameters
     sensorSensitivity applySensitivityInto parameters
     pictureResolution applyPictureResolutionInto parameters
+    whiteBalance applyInto parameters
 }
 
 private infix fun Flash.applyInto(parameters: Camera.Parameters) {
@@ -39,6 +40,10 @@ private infix fun Flash.applyInto(parameters: Camera.Parameters) {
 
 private infix fun FocusMode.applyInto(parameters: Camera.Parameters) {
     parameters.focusMode = toCode()
+}
+
+private infix fun WhiteBalance.applyInto(parameters: Camera.Parameters) {
+    parameters.whiteBalance = toCode()
 }
 
 private infix fun Int.applyJpegQualityInto(parameters: Camera.Parameters) {
